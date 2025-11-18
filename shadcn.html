@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shadcn UI Design System</title>
+    <link rel="stylesheet" href="shadcn.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="shadcn-container">
+        <nav class="shadcn-nav">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <div class="brand-icon">⚡</div>
+                    <span class="brand-text">shadcn/ui</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link active">Components</a>
+                    <a href="#" class="nav-link">Documentation</a>
+                    <a href="#" class="nav-link">Examples</a>
+                    <a href="#" class="nav-link">Themes</a>
+                </div>
+                <div class="nav-actions">
+                    <button class="theme-toggle">
+                        <span class="theme-icon">🌙</span>
+                    </button>
+                </div>
+            </div>
+        </nav>
+
+        <main class="shadcn-main">
+            <div class="shadcn-sidebar">
+                <div class="sidebar-section">
+                    <div class="sidebar-title">Components</div>
+                    <a href="#" class="sidebar-item active">
+                        <span class="sidebar-icon">📦</span>
+                        <span>Button</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="sidebar-icon">📋</span>
+                        <span>Card</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="sidebar-icon">📝</span>
+                        <span>Input</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="sidebar-icon">📊</span>
+                        <span>Table</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="sidebar-icon">🎨</span>
+                        <span>Dialog</span>
+                    </a>
+                    <a href="#" class="sidebar-item">
+                        <span class="sidebar-icon">📑</span>
+                        <span>Dropdown</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="shadcn-content">
+                <div class="content-header">
+                    <h1 class="content-title">Button</h1>
+                    <p class="content-description">Displays a button or a component that looks like a button.</p>
+                </div>
+
+                <div class="component-section">
+                    <h2 class="section-title">Default</h2>
+                    <div class="component-demo">
+                        <button class="shadcn-btn">Button</button>
+                        <button class="shadcn-btn" disabled>Disabled</button>
+                    </div>
+                    <div class="code-block">
+                        <pre><code>&lt;button class="shadcn-btn"&gt;Button&lt;/button&gt;</code></pre>
+                    </div>
+                </div>
+
+                <div class="component-section">
+                    <h2 class="section-title">Variants</h2>
+                    <div class="component-demo">
+                        <button class="shadcn-btn shadcn-btn-default">Default</button>
+                        <button class="shadcn-btn shadcn-btn-destructive">Destructive</button>
+                        <button class="shadcn-btn shadcn-btn-outline">Outline</button>
+                        <button class="shadcn-btn shadcn-btn-secondary">Secondary</button>
+                        <button class="shadcn-btn shadcn-btn-ghost">Ghost</button>
+                        <button class="shadcn-btn shadcn-btn-link">Link</button>
+                    </div>
+                </div>
+
+                <div class="component-section">
+                    <h2 class="section-title">Sizes</h2>
+                    <div class="component-demo">
+                        <button class="shadcn-btn shadcn-btn-sm">Small</button>
+                        <button class="shadcn-btn">Default</button>
+                        <button class="shadcn-btn shadcn-btn-lg">Large</button>
+                        <button class="shadcn-btn shadcn-btn-icon">
+                            <span>+</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="component-section">
+                    <h2 class="section-title">Card Component</h2>
+                    <div class="component-demo">
+                        <div class="shadcn-card">
+                            <div class="card-header">
+                                <h3 class="card-title">Card Title</h3>
+                                <p class="card-description">Card description goes here</p>
+                            </div>
+                            <div class="card-content">
+                                <p>This is the card content area where you can place any content.</p>
+                            </div>
+                            <div class="card-footer">
+                                <button class="shadcn-btn shadcn-btn-sm">Action</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-section">
+                    <h2 class="section-title">Input Component</h2>
+                    <div class="component-demo">
+                        <div class="input-group">
+                            <label class="input-label">Email</label>
+                            <input type="email" class="shadcn-input" placeholder="name@example.com">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Password</label>
+                            <input type="password" class="shadcn-input" placeholder="Enter password">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="component-section">
+                    <h2 class="section-title">Table Component</h2>
+                    <div class="component-demo">
+                        <div class="shadcn-table-container">
+                            <table class="shadcn-table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Status</th>
+                                        <th>Role</th>
+                                        <th>Email</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>John Doe</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Admin</td>
+                                        <td>john@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Jane Smith</td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>User</td>
+                                        <td>jane@example.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bob Johnson</td>
+                                        <td><span class="badge badge-secondary">Inactive</span></td>
+                                        <td>User</td>
+                                        <td>bob@example.com</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <a href="gallery.html" class="back-link">← Back to Gallery</a>
+
+    <script src="shadcn.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Retro GUI - Windows 95 Style</title>
+    <link rel="stylesheet" href="retro.css">
+</head>
+<body>
+    <div class="retro-desktop">
+        <!-- Taskbar -->
+        <div class="taskbar">
+            <button class="start-button">
+                <span class="start-icon">☰</span>
+                <span class="start-text">Start</span>
+            </button>
+            <div class="taskbar-tasks">
+                <div class="taskbar-item active">
+                    <span class="taskbar-icon">📁</span>
+                    <span class="taskbar-text">My Computer</span>
+                </div>
+                <div class="taskbar-item">
+                    <span class="taskbar-icon">📄</span>
+                    <span class="taskbar-text">Notepad</span>
+                </div>
+            </div>
+            <div class="taskbar-tray">
+                <span class="tray-time">11:45 AM</span>
+            </div>
+        </div>
+
+        <!-- Desktop Icons -->
+        <div class="desktop-icons">
+            <div class="desktop-icon">
+                <div class="icon-image">📁</div>
+                <div class="icon-label">My Computer</div>
+            </div>
+            <div class="desktop-icon">
+                <div class="icon-image">📂</div>
+                <div class="icon-label">My Documents</div>
+            </div>
+            <div class="desktop-icon">
+                <div class="icon-image">🗑️</div>
+                <div class="icon-label">Recycle Bin</div>
+            </div>
+            <div class="desktop-icon">
+                <div class="icon-image">🌐</div>
+                <div class="icon-label">Internet Explorer</div>
+            </div>
+        </div>
+
+        <!-- Main Window -->
+        <div class="window active" style="left: 200px; top: 100px; width: 600px; height: 400px;">
+            <div class="window-titlebar">
+                <div class="window-icon">📁</div>
+                <div class="window-title">My Computer</div>
+                <div class="window-controls">
+                    <button class="window-btn minimize">_</button>
+                    <button class="window-btn maximize">□</button>
+                    <button class="window-btn close">×</button>
+                </div>
+            </div>
+            <div class="window-menu">
+                <div class="menu-item">File</div>
+                <div class="menu-item">Edit</div>
+                <div class="menu-item">View</div>
+                <div class="menu-item">Help</div>
+            </div>
+            <div class="window-toolbar">
+                <button class="toolbar-btn">← Back</button>
+                <button class="toolbar-btn">↑ Up</button>
+                <div class="toolbar-separator"></div>
+                <button class="toolbar-btn">📁</button>
+                <button class="toolbar-btn">✂️</button>
+                <button class="toolbar-btn">📋</button>
+                <button class="toolbar-btn">📄</button>
+                <div class="toolbar-separator"></div>
+                <button class="toolbar-btn">🗑️</button>
+            </div>
+            <div class="window-content">
+                <div class="content-icons">
+                    <div class="content-icon">
+                        <div class="icon-img">💿</div>
+                        <div class="icon-label">3½ Floppy (A:)</div>
+                    </div>
+                    <div class="content-icon">
+                        <div class="icon-img">💿</div>
+                        <div class="icon-label">5¼ Floppy (B:)</div>
+                    </div>
+                    <div class="content-icon">
+                        <div class="icon-img">💾</div>
+                        <div class="icon-label">Local Disk (C:)</div>
+                    </div>
+                    <div class="content-icon">
+                        <div class="icon-img">💿</div>
+                        <div class="icon-label">CD-ROM (D:)</div>
+                    </div>
+                    <div class="content-icon">
+                        <div class="icon-img">📁</div>
+                        <div class="icon-label">Control Panel</div>
+                    </div>
+                    <div class="content-icon">
+                        <div class="icon-img">🖥️</div>
+                        <div class="icon-label">Printers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Start Menu (hidden by default) -->
+        <div class="start-menu">
+            <div class="start-menu-header">
+                <div class="start-menu-title">Windows 95</div>
+            </div>
+            <div class="start-menu-items">
+                <div class="start-menu-item">
+                    <span class="menu-icon">📁</span>
+                    <span class="menu-text">Programs</span>
+                    <span class="menu-arrow">▶</span>
+                </div>
+                <div class="start-menu-item">
+                    <span class="menu-icon">📄</span>
+                    <span class="menu-text">Documents</span>
+                </div>
+                <div class="start-menu-item">
+                    <span class="menu-icon">⚙️</span>
+                    <span class="menu-text">Settings</span>
+                </div>
+                <div class="start-menu-item">
+                    <span class="menu-icon">🔍</span>
+                    <span class="menu-text">Find</span>
+                </div>
+                <div class="start-menu-item">
+                    <span class="menu-icon">❓</span>
+                    <span class="menu-text">Help</span>
+                </div>
+                <div class="start-menu-item">
+                    <span class="menu-icon">▶</span>
+                    <span class="menu-text">Run...</span>
+                </div>
+                <div class="start-menu-separator"></div>
+                <div class="start-menu-item">
+                    <span class="menu-icon">🚪</span>
+                    <span class="menu-text">Shut Down...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="gallery.html" class="back-link">← Back to Gallery</a>
+
+    <script src="retro.js"></script>
+</body>
+</html>
+
