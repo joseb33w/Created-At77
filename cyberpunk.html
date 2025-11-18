@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberpunk Interface</title>
+    <link rel="stylesheet" href="cyberpunk.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="scan-line"></div>
+    <div class="cyber-container">
+        <header class="cyber-header">
+            <div class="cyber-logo" data-text="CYBER_OS">CYBER_OS v2.077</div>
+            <div class="system-status">
+                <span class="status-dot"></span>
+                SYSTEM ONLINE
+            </div>
+        </header>
+
+        <div class="main-grid">
+            <aside class="cyber-sidebar">
+                <div class="cyber-box">
+                    <h3>NAVIGATION</h3>
+                    <ul class="cyber-nav">
+                        <li class="active" data-text="DASHBOARD">DASHBOARD</li>
+                        <li data-text="NETRUNNER">NETRUNNER</li>
+                        <li data-text="INVENTORY">INVENTORY</li>
+                        <li data-text="MAP">MAP_DATA</li>
+                    </ul>
+                </div>
+
+                <div class="cyber-box status-box">
+                    <h3>VITALS</h3>
+                    <div class="stat-bar">
+                        <div class="stat-label">HP</div>
+                        <div class="bar-bg"><div class="bar-fill hp-fill"></div></div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-label">RAM</div>
+                        <div class="bar-bg"><div class="bar-fill ram-fill"></div></div>
+                    </div>
+                    <div class="stat-bar">
+                        <div class="stat-label">REP</div>
+                        <div class="bar-bg"><div class="bar-fill rep-fill"></div></div>
+                    </div>
+                </div>
+            </aside>
+
+            <main class="cyber-content">
+                <div class="cyber-box data-stream">
+                    <div class="stream-header">
+                        <h3>DATA_STREAM</h3>
+                        <span class="live-badge">LIVE</span>
+                    </div>
+                    <div class="stream-content">
+                        <div class="stream-line">> CONNECTING TO SERVER...</div>
+                        <div class="stream-line">> ENCRYPTION: <span class="secure">SECURE</span></div>
+                        <div class="stream-line">> UPLOADING DAEMON...</div>
+                        <div class="stream-line">> ACCESS GRANTED</div>
+                        <div class="hex-grid" id="hexGrid"></div>
+                    </div>
+                </div>
+
+                <div class="grid-2-col">
+                    <div class="cyber-box mission-box">
+                        <h3>CURRENT_MISSION</h3>
+                        <div class="mission-details">
+                            <h4>RETRIEVE DATA SHARD</h4>
+                            <p>Target location: Sector 7G. High security alert. Stealth recommended.</p>
+                            <div class="mission-rewards">
+                                <span>REWARD: 5000€$</span>
+                                <span>XP: +250</span>
+                            </div>
+                            <button class="cyber-btn">ACCEPT_CONTRACT</button>
+                        </div>
+                    </div>
+
+                    <div class="cyber-box weapons-box">
+                        <h3>EQUIPPED_WEAPON</h3>
+                        <div class="weapon-display">
+                            <div class="weapon-name">MANTIS_BLADES</div>
+                            <div class="weapon-stats">
+                                <div class="w-stat">
+                                    <span>DMG</span>
+                                    <span>245-290</span>
+                                </div>
+                                <div class="w-stat">
+                                    <span>SPD</span>
+                                    <span>2.5</span>
+                                </div>
+                                <div class="w-stat">
+                                    <span>CRIT</span>
+                                    <span>15%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <a href="gallery.html" class="back-link">
+        <span class="bracket">[</span> RETURN <span class="bracket">]</span>
+    </a>
+
+    <script>
+        // Matrix rain effect for hex grid
+        const hexGrid = document.getElementById('hexGrid');
+        const chars = '0123456789ABCDEF';
+        
+        function updateHex() {
+            let content = '';
+            for(let i=0; i<100; i++) {
+                content += chars[Math.floor(Math.random() * chars.length)] + ' ';
+            }
+            hexGrid.innerText = content;
+        }
+        
+        setInterval(updateHex, 100);
+
+        // Glitch effect on hover
+        document.querySelectorAll('.cyber-btn, .cyber-nav li').forEach(el => {
+            el.addEventListener('mouseover', () => {
+                el.style.transform = `translate(${Math.random()*2-1}px, ${Math.random()*2-1}px)`;
+                setTimeout(() => el.style.transform = 'none', 200);
+            });
+        });
+    </script>
+</body>
+</html>
+

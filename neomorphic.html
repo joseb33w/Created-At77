@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neomorphism Design</title>
+    <link rel="stylesheet" href="neomorphic.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="neo-container">
+        <div class="neo-music-player">
+            <div class="player-header">
+                <button class="neo-btn small"><i class="fas fa-arrow-left"></i></button>
+                <span>PLAYING NOW</span>
+                <button class="neo-btn small"><i class="fas fa-bars"></i></button>
+            </div>
+            
+            <div class="album-art">
+                <div class="art-inner">
+                    <div class="art-placeholder">
+                        <i class="fas fa-music"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="song-info">
+                <h2>Soft Shadows</h2>
+                <p>Neumorphism Band</p>
+            </div>
+
+            <div class="progress-area">
+                <div class="time">
+                    <span>1:24</span>
+                    <span>3:42</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                    <div class="progress-handle"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="neo-btn medium"><i class="fas fa-backward"></i></button>
+                <button class="neo-btn large play-btn"><i class="fas fa-play"></i></button>
+                <button class="neo-btn medium"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+
+        <div class="neo-controls-panel">
+            <div class="panel-section">
+                <h3>Smart Home</h3>
+                <div class="switch-grid">
+                    <div class="switch-card active">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Living Room</span>
+                    </div>
+                    <div class="switch-card">
+                        <i class="fas fa-fan"></i>
+                        <span>AC Unit</span>
+                    </div>
+                    <div class="switch-card">
+                        <i class="fas fa-tv"></i>
+                        <span>Smart TV</span>
+                    </div>
+                    <div class="switch-card">
+                        <i class="fas fa-wifi"></i>
+                        <span>Router</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-section">
+                <h3>Temperature</h3>
+                <div class="temp-control">
+                    <button class="neo-btn small"><i class="fas fa-minus"></i></button>
+                    <div class="temp-display">24°C</div>
+                    <button class="neo-btn small"><i class="fas fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <a href="gallery.html" class="back-link">← Back to Gallery</a>
+    
+    <script>
+        // Simple interaction script
+        document.querySelectorAll('.neo-btn, .switch-card').forEach(el => {
+            el.addEventListener('click', () => {
+                if(el.classList.contains('switch-card')) {
+                    el.classList.toggle('active');
+                } else {
+                    el.classList.add('pressed');
+                    setTimeout(() => el.classList.remove('pressed'), 150);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
+
